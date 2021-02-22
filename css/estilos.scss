@@ -1,0 +1,12 @@
+$plataformas-spacing: 5px;
+@import "plataformas/*.png";
+
+@import "helpers/variaveis";
+@import "helpers/mixins";
+
+@import "base/normalize";
+@import "base/geral";
+
+@import "layouts/cabecalho";
+@import "layouts/main";
+@import "layouts/rodape";

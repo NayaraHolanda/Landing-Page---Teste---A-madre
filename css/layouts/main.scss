@@ -1,0 +1,257 @@
+.container {
+    position: relative;
+    display: flex;
+    justify-content: center;
+}
+
+.sobre {
+    background-image: url("https://via.placeholder.com/200/222222/222222");
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 2rem 2rem 5.5rem 2rem;
+    width: 100vw;
+}
+
+.binoculo {
+    width: 150px;
+    height: 150px;
+}
+
+.titulo {
+    color: $branco;
+    font-weight: bold;
+    font-size: 2.5rem;
+    padding-bottom: 3rem;
+    text-align: center;
+}
+
+.titulo-muda-cor {
+    color: $amarelo;
+}
+
+.subtitulo {
+    color: $branco;
+    text-align: center;
+    padding-bottom: 3rem;
+    // line-height: 1.2rem;
+}
+
+.botao-explorar {
+    color: $branco;
+    background-color: $amarelo;
+    outline: 0;
+    border: none;
+    border-radius: 20px;
+    text-transform: uppercase;
+    font-weight: bold;
+    padding: .9rem 3rem;
+    font-size: 1.2rem;
+    margin-bottom: 3rem;
+    @extend %cursor-botoes;
+}
+
+.circulo-amarelo {
+    width: 25px;
+    height: 25px;
+    background: $amarelo;
+    border-radius: 50px;
+    margin-bottom: 3rem;
+}
+
+.balao {
+    background-color: $branco;
+    border-radius: 30px;
+    width: 50vw;
+    height: auto;
+    text-align: center;
+    padding: 2rem 3rem;
+    box-shadow: 2px 5px 5px $cinza;
+    position: absolute;
+    top: 500px;
+}
+
+.balao__titulo {
+    color: $preto-mais-claro;
+    font-size: 1.5rem;
+    font-weight: bold;
+    padding-bottom: 1rem;
+    text-align: center;
+}
+
+.balao__subtitulo {
+    color: $cinza;
+    padding-bottom: 1rem;
+    font-size: .8rem;
+    line-height: 1.2rem;
+}
+
+.balao__botoes {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    @extend %cursor-botoes;
+
+    @media screen and (min-width: 600px) {
+        justify-content: center;
+    }
+}
+
+.balao__botao-amarelo {
+    background-color: $amarelo;
+    color: $branco;
+    border: none;
+    @extend %estilo-botao-balao;
+    @extend %cursor-botoes;
+
+    @media screen and (min-width: 450px) {
+        padding: .5rem 1rem;
+    }
+
+    @media screen and (min-width: 600px) {
+        margin-right: 1rem;
+    }
+}
+
+.balao__botao-branco {
+    background-color: $branco;
+    color: $amarelo;
+    border: 1px solid $amarelo;
+    @extend %estilo-botao-balao;
+    @extend %cursor-botoes;
+
+    @media screen and (min-width: 450px) {
+        padding: .5rem 1rem;
+    }
+}
+
+.classes {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 200px 2rem 120px 2rem;
+}
+
+.classes__titulo {
+    font-size: 3rem;
+    padding-bottom: 1rem;
+    text-align: center;
+}
+
+.classes__subtitulo {
+    color: $cinza-mais-escuro;
+    font-size: 1.5rem;
+    padding-bottom: 1rem;
+    text-align: center;
+}
+
+.fundo-amarelo {
+    background-color: $amarelo;
+    height: 1200px;
+
+    @media screen and (min-width: 342px) {
+        height: 1110px;
+    }
+
+    @media screen and (min-width: 389px) {
+        height: 1160px;
+    }
+
+    @media screen and (min-width: 473px) {
+        height: 1080px;
+    }
+
+    @media screen and (min-width: 880px) {
+        height: 380px;
+    }
+}
+
+.fundo-branco {
+    height: 25px;
+}
+
+.tipos {
+    display: flex;
+    justify-content: space-around;
+    text-align: center;
+    flex-wrap: wrap;
+    flex-direction: column;
+    position: absolute;
+    top: 390px;
+    padding: 2rem 3rem;
+    
+    @media screen and (min-width: 880px) {
+        flex-direction: row;
+    }
+
+    @media screen and (min-width: 536px) {
+        top: 370px;
+    }
+}
+
+.tipos__item {
+    width: 50vw;
+    text-align: center;
+    color: $branco;
+
+    @media screen and (min-width: 880px) {
+        width: 25vw;
+    }
+}
+
+.tipos__espacamento {
+    @media screen and (min-width: 880px) {
+        margin-right: 2rem;
+    }
+}
+
+.tipos__item > img {
+    border-radius: 25%;
+    @extend %espaco-entre-tipos;
+
+    @media screen and (min-width: 880px) {
+        margin-bottom: 2rem;
+    }
+}
+
+.tipos__item > h2 {
+    text-transform: uppercase;
+    font-weight: bold;
+    @extend %espaco-entre-tipos;
+
+    @media screen and (min-width: 880px) {
+        margin-bottom: 2rem;
+    }
+}
+
+.tipos__item > p {
+    line-height: 2rem;
+    font-size: .8rem;
+    @extend %espaco-entre-tipos;
+    
+    @media screen and (min-width: 880px) {
+        padding: 0 1rem;
+        margin-bottom: 2rem;
+    }
+    
+    @media screen and (min-width: 1255px) {
+        padding: 0 3rem;
+    }
+}
+
+.tipos__item > button {
+    background-color: $amarelo;
+    color: $branco;
+    border: 1px solid $branco;
+    font-weight: bold;
+    padding: .3rem 1rem;
+    border-radius: 5px;
+    margin-bottom: 2rem;
+    @extend %cursor-botoes;
+
+    @media screen and (min-width: 880px) {
+        margin-bottom: 0;
+    }
+}
